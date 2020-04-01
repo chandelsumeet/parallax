@@ -112,18 +112,11 @@ var currentSlideNumber = 0;
 //var totalSlideNumber = (".background").length;
 var totalSlideNumber = 4;
 
-
-
-
-
-
-
-
-
 function parallaxScroll(evt) {    
     var touchobj = evt.changedTouches[0]; 
     var dist = parseInt(touchobj.clientX) - startx; 
 }
+
 
 
 window.addEventListener('touchstart', function(e){
@@ -133,8 +126,10 @@ window.addEventListener('touchstart', function(e){
     }, false);
 
 
+
 var touchobj = evt.changedTouches[0]; 
 var dist = parseInt(touchobj.clientX) - startx;
+
 
 
 
@@ -182,7 +177,7 @@ function previousItem() {
   var $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
-}
+
 
 var startx = 0;
 var dist = 0;
@@ -193,10 +188,5 @@ window.addEventListener('load', function(){
         e.preventDefault();
     }, false);
     window.addEventListener('touchmove', _.throttle(parallaxScroll, 60), false);
-}, false);     
-
-
-
-
-
+}, false);
 
