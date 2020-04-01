@@ -106,8 +106,8 @@
 var ticking = false;
 var isFirefox = (/Firefox/i.test(navigator.userAgent));
 var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
-var scrollSensitivitySetting = 60; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
-var slideDurationSetting = 600; //Amount of time for which slide is "locked"
+var scrollSensitivitySetting = 40; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
+var slideDurationSetting = 400; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = (".background").length;
 var totalSlideNumber = 4;
@@ -126,7 +126,7 @@ var totalSlideNumber = 4;
 
 function parallaxScroll(evt) {    
     var touchobj = evt.changedTouches[0]; 
-    var dist = parseInt(touchobj.clientX) - startx; 
+    var dist = parseInt(touchobj.clientY) - startx; 
 
     if (ticking != true) {
         if (dist <= -scrollSensitivitySetting) {
