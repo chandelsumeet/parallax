@@ -95,7 +95,7 @@ if(screen.width <=500)
 
 function parallaxScroll(evt) {    
     var touchobj = evt.changedTouches[0]; 
-    var dist = parseInt(touchobj.clientX) - startx; 
+    var dist = parseInt(touchobj.clientY) - startx; 
 
     if (ticking != true) {
         if (dist <= -scrollSensitivitySetting) {
@@ -144,7 +144,7 @@ var dist = 0;
 window.addEventListener('load', function(){ 
     window.addEventListener('touchstart', function(e){
         var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
-        startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser
+        startx = parseInt(touchobj.clientY); // get x position of touch point relative to left edge of browser
         e.preventDefault();
     }, false);
     window.addEventListener('touchmove', _.throttle(parallaxScroll, 60), false);
