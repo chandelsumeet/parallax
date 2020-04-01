@@ -95,7 +95,7 @@ if(screen.width <=500)
 
 function parallaxScroll(evt) {    
     var touchobj = evt.changedTouches[0]; 
-    var dist = parseInt(touchobj.clientY) - startx; 
+    var dist = parseInt(touchobj.clientX) - startx; 
 
     if (ticking != true) {
         if (dist <= -scrollSensitivitySetting) {
