@@ -112,23 +112,14 @@ var currentSlideNumber = 0;
 //var totalSlideNumber = (".background").length;
 var totalSlideNumber = 4;
 
-function parallaxScroll(evt) {    
-    var touchobj = evt.changedTouches[0]; 
-    var dist = parseInt(touchobj.clientX) - startx; 
-}
 
 
 
-window.addEventListener('touchstart', function(e){
-        var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
-        startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser(X and Y upto the choice)
-        e.preventDefault();
-    }, false);
 
 
 
-var touchobj = evt.changedTouches[0]; 
-var dist = parseInt(touchobj.clientX) - startx;
+
+
 
 
 
